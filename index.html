@@ -572,7 +572,7 @@
 
 </main>
 
-<footer>Powered by Claude AI · Not affiliated with Blizzard</footer>
+<footer>Powered by Google Gemini · Not affiliated with Blizzard</footer>
 
 <!-- HERO PICKER MODAL -->
 <div class="modal-overlay" id="modal-overlay">
@@ -918,7 +918,7 @@ KEY STRATEGY
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.7, maxOutputTokens: 1000 }
+        generationConfig: { temperature: 0.7, maxOutputTokens: 2048, thinkingConfig: { thinkingBudget: 0 } }
       })
     });
 
